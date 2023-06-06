@@ -8,8 +8,8 @@ import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment'
 import { HttpClientModule } from '@angular/common/http'
-import { EffectsModule, EffectsRootModule } from '@ngrx/effects'
-
+import { EffectsModule, EffectsRootModule } from '@ngrx/effects';
+import { TopBarModule } from './shared/modules/topbar/topbar.module'
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +22,8 @@ import { EffectsModule, EffectsRootModule } from '@ngrx/effects'
       logOnly: environment.production
     }),
     HttpClientModule,
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    TopBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
